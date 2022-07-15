@@ -48,7 +48,7 @@ fn get_seed_data() -> Vec<Vec<u8>> {
     for _ in 0..NUMBER_OF_HASHES {
         v.push(rx.recv().unwrap());
     }
-    return v;
+    v
 }
 
 struct StringWithHash {
@@ -78,7 +78,7 @@ fn get_colliding_hash_data(input: Vec<Vec<u8>>) -> Vec<StringWithHash> {
     for _ in 0..NUMBER_OF_HASHES {
         v.push(rx.recv().unwrap());
     }
-    return v;
+    v
 }
 
 #[derive(Debug, Clone)]
